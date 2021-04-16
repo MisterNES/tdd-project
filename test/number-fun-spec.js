@@ -20,7 +20,7 @@ describe("returnsThree()", () => {
 });
 
 describe("reciprocal(num)", () => {
-  context("if given a number", () => {
+  context("if given a valid number", () => {
     it("should return the reciprocal of num", () => {
       //Arrange
         let num = 3;
@@ -38,4 +38,21 @@ describe("reciprocal(num)", () => {
 
     });
   });
+
+  context("if given an invalid number", () => {
+    it("should throw a TypeError", () => {
+      //Arrange
+      let num = -1
+
+      //Act
+     // let result = reciprocal(num);
+
+      //Assert
+      expect(() => reciprocal(-1)).to.throw(TypeError);
+
+
+    })
+  })
+
+
 });
