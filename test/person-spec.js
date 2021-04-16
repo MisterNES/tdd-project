@@ -8,8 +8,12 @@ const { Person } = require('../problems/person.js');
 
 describe("Person class", () => {
     let nate;
+    let sarah;
+
     beforeEach("set up a Person instance", () => {
         nate = new Person("Nate", 39);
+        sarah = new Person("Sarah", 35);
+
     });
 
     describe("Person constructor()", () => {
@@ -37,5 +41,26 @@ describe("Person class", () => {
         })
     })
 
-    
+    describe("visit(otherPerson)", () => {
+        it("should return a string stating visit to another Person", () => {
+            //Arrange
+            let string = `${nate.name} visits ${sarah.name}`;
+
+            //Act
+            let result = nate.visit(sarah);
+            //Assert
+            expect(result).to.equal(string);
+        });
+    });
+
+    describe("switchVisit()", () => {
+        it("should return a string stating other Person's visit", () => {
+            //Arrange
+            
+
+        })
+
+
+    })
+
 })
